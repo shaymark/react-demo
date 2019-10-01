@@ -36,16 +36,16 @@ export const recievePosts = (subReddit, json) => {
 }
 
 export const fetchPosts = (subreddit) => {
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch(requestPosts(subreddit))
-        return fetch(`https://www.reddit.com/r/${subreddit}.json`)
-        .then(
-            response => response.json(),
-            error => console.log('An error accored', error)
-        )
-        .then( json =>  dispatch(recievePosts(subreddit, json))
-            
-        )
+        try {
+            const response = await fetch(`https://www.reddit.com/r/${subreddit}.json`);
+            const json = await response.json();
+            return dispatch(recievePosts(subreddit, json))
+        }
+        catch (error) {
+            console.log('An error accored', error);
+        }
     }  
 }
 
