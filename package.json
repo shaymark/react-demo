@@ -21,13 +21,17 @@
     "webpack-dev-server": "^3.8.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "bable-loader": "0.0.1-security",
+    "cross-fetch": "^3.0.4",
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
     "react-redux": "^7.1.1",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "presets": [
     "@babel/preset-env",
