@@ -21,6 +21,7 @@
     "webpack-dev-server": "^3.8.1"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "babel-polyfill": "^6.26.0",
     "bable-loader": "0.0.1-security",
     "cross-fetch": "^3.0.4",
